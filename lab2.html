@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
     body {
       background-color: lightgray;
-      margin: 0px;
+
     }
+
     .title {
-      background-color: rgb(75, 118, 192);
-      height: 40px;
+      background-color: rgb(93, 173, 226);
+      height: 50px;
       color: white;
-      text-align: center;
-      line-height: 40px;
+      line-height: 50px;
+      display: flex;
+      justify-content: center;
     }
+
     .page {
+      display: block;
       color: white;
-      margin-left: 20px;
+      padding: 15px;
     }
+
+    .box {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .container1,
+    .container3 {
+      background-color: rgb(93, 173, 226);
+      width: 100vw;
+    }
+
+    .container2 {
+      padding: 30px;
+    }
+
     .menu {
-      background-color: rgb(75, 118, 192);
-      width: 200px;
-      height: 400px;
+      margin: 40px auto;
     }
-    nav a {
+
+    a {
       text-decoration: none;
       display: flex;
       flex-direction: column;
@@ -34,19 +59,95 @@
       padding: 10px;
     }
 
+    nav a:hover {
+      color: red;
+    }
+
+    .r {
+      color: white;
+      text-align: center;
+      margin: 75px auto;
+      padding: 10px;
+    }
+
+    #btn {
+      float: right;
+    }
+
+    button {
+      color: white;
+      background-color: rgb(93, 173, 226);
+      width: 100px;
+      height: 30px;
+      border-radius: 10%;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width:768px) {
+      .box {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container1,
+      .container3 {
+        width: 100%;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <p class="title">Lab 2</p>
-  <p class="page">Home</p>
-  <div class="menu">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#">About</a>
-      <a href="#">Products</a>
-      <a href="#">Contact</a>
-    </nav>
+  <div class="title">
+    <p>Lab 2</p>
   </div>
+  <p class="page">Home</p>
+  <div class="box">
+    <!-- c1 start -->
+    <div class="container1">
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <!-- c1 end -->
+    <!-- c2 st -->
+    <div class="container2">
+      <h2 id="output"></h2>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates est placeat laboriosam, atque, blanditiis
+        eveniet nostrum impedit quos et nemo eos amet maxime minima nesciunt? Necessitatibus quasi hic a tenetur?Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Minus quae nobis repudiandae ad id aliquam ipsa magnam
+        voluptatibus sit dicta atque unde, itaque corrupti possimus veniam debitis minima omnis qui?Lorem ipsum, dolor
+        sit amet consectetur adipisicing elit. A animi velit rerum cum sed veritatis, ipsum at, accusantium deleniti
+        ipsam repellat nobis corrupti, laboriosam ut? At odit commodi eius sed.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, voluptas? Aliquid vel qui praesentium aperiam,
+        inventore fuga voluptas quam ex. Soluta, modi sapiente ea dolore consequuntur repellat asperiores odio
+        reprehenderit?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore aliquid sunt voluptates illum
+        iste autem sapiente aliquam ea repudiandae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, error? Totam sequi veniam repellat quos perspiciatis provident, tenetur est in ut soluta assumenda. Aliquam nostrum quibusdam recusandae quaerat suscipit rem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio commodi quasi ipsa officiis nulla consequatur dolores, numquam veniam, unde doloribus harum, autem quae nihil. Expedita praesentium impedit odio excepturi quod.
+       </p>
+      <div id="btn">
+        <button onclick="document.getElementById('output').innerHTML='Welcom to PRE-WMAD Course';">click!</button>
+      </div>
+    </div>
+    <!-- c2 end -->
+    <!-- c3 st -->
+    <div class="container3">
+      <p class="r">HTML & CSS</p>
+    </div>
+    <!-- c3 end -->
+
+  </div>
+  <p class="footer">Pre-WMAD 2020</p>
+  <script>
+    document.getElementById("output").innerHTML = "Hello";
+  </script>
 
 </body>
+
 </html>
